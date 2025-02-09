@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { JournalApp } from './JournalApp';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './styles.css';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -14,9 +14,9 @@ import { store } from './store';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter>
         <JournalApp />
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
   </StrictMode>,
 )
